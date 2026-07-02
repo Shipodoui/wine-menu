@@ -65,7 +65,7 @@ main {
     transform: translateY(10px);
     pointer-events: none;
 
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition: opacity 0s ease, transform 0.25s ease;
 }
 
 /* ACTIVE VIEW */
@@ -80,8 +80,18 @@ main {
 /* GRID */
 .category {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
     gap: 15px;
+}
+
+.category, .category *, .itemPage, .itemPage * {
+	max-height:0;
+	position: absolute;
+}
+
+.category.active, .category.active *, .itemPage.active, .itemPage.active * {
+	max-height: 100vh;
+	position: relative;
 }
 
 /* CARD */
