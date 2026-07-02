@@ -49,14 +49,13 @@ main {
     max-width: 1000px;
     margin: auto;
     padding: 20px;
-    min-height: 500px;
 }
 
 /* VIEWS (categories + items) */
 .category,
 .itemPage {
     position: absolute;
-    width: 100%;
+    width: 90%;
 
     opacity: 0;
     transform: translateY(10px);
@@ -71,6 +70,7 @@ main {
     transform: translateY(0);
     pointer-events: auto;
     position: relative;
+	width: 100%;
 }
 
 /* GRID */
