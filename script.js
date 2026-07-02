@@ -37,7 +37,7 @@ function navigate(id, addToHistory = true) {
 
 /* back/forward */
 window.addEventListener("popstate", (event) => {
-    const id = event.state?.page || "starters";
+    const id = event.state?.page || "vins";
     showView(id);
 
     requestAnimationFrame(checkNavOverflow);
@@ -45,7 +45,7 @@ window.addEventListener("popstate", (event) => {
 
 /* initial load */
 window.addEventListener("DOMContentLoaded", () => {
-    navigate("starters", false);
+    navigate("vins", false);
 
     // initial check
     requestAnimationFrame(checkNavOverflow);

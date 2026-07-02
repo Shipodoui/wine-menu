@@ -132,8 +132,6 @@ main {
 .item-price {
   white-space: nowrap;
   font-weight: bold;
-  margin-block-start: 1em;
-  font-size: 2em;
 }
 
 .active img {
