@@ -18,7 +18,7 @@ header {
 /* NAV */
 nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     gap: 10px;
     padding: 10px;
 
@@ -32,6 +32,10 @@ nav {
 
 nav::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
+}
+
+nav.is-overflow {
+    justify-content: flex-start;
 }
 
 nav button {
@@ -96,6 +100,12 @@ main {
 
 /* ITEM PAGE */
 .itemPage img {
+    width: 0%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.active img {
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;

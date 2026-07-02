@@ -1,112 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Restaurant Menu</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-    <h1>My Restaurant</h1>
-</header>
-
-<nav>
-    <button onclick="navigate('starters')">Starters</button>
-    <button onclick="navigate('mains')">Main Courses</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-    <button onclick="navigate('desserts')">Desserts</button>
-</nav>
-
-<main>
-
-    <!-- CATEGORIES -->
-
-    <section id="starters" class="view category">
-        <div class="menuItem" onclick="navigate('soup')">
-            <h3>Tomato Soup</h3>
-            <p>$6</p>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <h1>My Restaurant</h1>
+    </header>
+    <nav>
+      <button onclick="navigate('entrees')">Entrées</button>
+      <button onclick="navigate('plats')">Plats</button>
+      <button onclick="navigate('desserts')">Desserts</button>
+    </nav>
+    <main>
+      <!-- CATEGORIES -->
+      <section class="view category" id="entrees">
+        <div class="menuItem" onclick="navigate('soupe-a-la-tomate')">
+          <h3>Soupe à la tomate</h3>
+          <p>6€</p>
         </div>
-
-        <div class="menuItem" onclick="navigate('salad')">
-            <h3>Caesar Salad</h3>
-            <p>$8</p>
+        <div class="menuItem" onclick="navigate('salade-cesar')">
+          <h3>Salade César</h3>
+          <p>8€</p>
         </div>
-    </section>
-
-    <section id="mains" class="view category">
-        <div class="menuItem" onclick="navigate('burger')">
-            <h3>Burger</h3>
-            <p>$15</p>
+      </section>
+      <section class="view category" id="plats">
+        <div class="menuItem" onclick="navigate('burger-classique')">
+          <h3>Burger Classique</h3>
+          <p>15€</p>
         </div>
-
         <div class="menuItem" onclick="navigate('steak')">
-            <h3>Steak</h3>
-            <p>$24</p>
+          <h3>Steak</h3>
+          <p>24€</p>
         </div>
-    </section>
-
-    <section id="desserts" class="view category">
-        <div class="menuItem" onclick="navigate('cake')">
-            <h3>Chocolate Cake</h3>
-            <p>$7</p>
+      </section>
+      <section class="view category" id="desserts">
+        <div class="menuItem" onclick="navigate('gateau-au-chocolat')">
+          <h3>Gâteau au chocolat</h3>
+          <p>7€</p>
         </div>
-    </section>
-
-    <!-- ITEMS -->
-
-    <section id="soup" class="view itemPage">
-        <button onclick="navigate('starters')">← Back</button>
-        <h2>Tomato Soup</h2>
-        <img src="https://picsum.photos/600/300?1">
+      </section>
+      <!-- ITEMS -->
+      <section class="view itemPage" id="soupe-a-la-tomate">
+        <button onclick="navigate('entrees')">← Back</button>
+        <h2>Soupe à la tomate</h2>
         <p>Fresh tomato soup with basil.</p>
-    </section>
-
-    <section id="salad" class="view itemPage">
-        <button onclick="navigate('starters')">← Back</button>
-        <h2>Caesar Salad</h2>
-        <img src="https://picsum.photos/600/300?2">
+        <img src="https://picsum.photos/600/300?1" />
+      </section>
+      <section class="view itemPage" id="salade-cesar">
+        <button onclick="navigate('entrees')">← Back</button>
+        <h2>Salade César</h2>
         <p>Romaine, parmesan, croutons.</p>
-    </section>
-
-    <section id="burger" class="view itemPage">
-        <button onclick="navigate('mains')">← Back</button>
-        <h2>Burger</h2>
-        <img src="https://picsum.photos/600/300?3">
+        <img src="https://picsum.photos/600/300?2" />
+      </section>
+      <section class="view itemPage" id="burger-classique">
+        <button onclick="navigate('plats')">← Back</button>
+        <h2>Burger Classique</h2>
         <p>Beef burger with fries.</p>
-    </section>
-
-    <section id="steak" class="view itemPage">
-        <button onclick="navigate('mains')">← Back</button>
+        <img src="https://picsum.photos/600/300?3" />
+      </section>
+      <section class="view itemPage" id="steak">
+        <button onclick="navigate('plats')">← Back</button>
         <h2>Steak</h2>
-        <img src="https://picsum.photos/600/300?4">
         <p>Grilled steak with sauce.</p>
-    </section>
-
-    <section id="cake" class="view itemPage">
+        <img src="https://picsum.photos/600/300?4" />
+      </section>
+      <section class="view itemPage" id="gateau-au-chocolat">
         <button onclick="navigate('desserts')">← Back</button>
-        <h2>Chocolate Cake</h2>
-        <img src="https://picsum.photos/600/300?5">
+        <h2>Gâteau au chocolat</h2>
         <p>Rich chocolate cake.</p>
-    </section>
-
-</main>
-
-<script src="script.js"></script>
-
-</body>
+        <img src="https://picsum.photos/600/300?5" />
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>

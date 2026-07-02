@@ -1,4 +1,4 @@
-const views = document.querySelectorAll(".category, .itemPage");
+const views = document.querySelectorAll(".view");
 
 /* show a view */
 function showView(id) {
@@ -8,21 +8,23 @@ function showView(id) {
     if (el) el.classList.add("active");
 }
 
-/* router */
-function navigate(id) {
-    window.location.hash = id;
-}
+/* navigation */
+function navigate(id, addToHistory = true) {
 
-/* sync URL → UI */
-function handleRoute() {
-    const id = window.location.hash.replace("#", "") || "starters";
     showView(id);
+
+    if (addToHistory) {
+        history.pushState({ page: id }, "", "");
+    }
 }
 
-/* back/forward support */
-window.addEventListener("hashchange", handleRoute);
+/* back/forward */
+window.addEventListener("popstate", (event) => {
+    const id = event.state?.page || "starters";
+    showView(id);
+});
 
-/* init */
+/* initial load */
 window.addEventListener("DOMContentLoaded", () => {
-    handleRoute();
+    navigate("starters", false);
 });
