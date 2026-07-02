@@ -1,0 +1,28 @@
+const views = document.querySelectorAll(".category, .itemPage");
+
+/* show a view */
+function showView(id) {
+    views.forEach(v => v.classList.remove("active"));
+
+    const el = document.getElementById(id);
+    if (el) el.classList.add("active");
+}
+
+/* router */
+function navigate(id) {
+    window.location.hash = id;
+}
+
+/* sync URL → UI */
+function handleRoute() {
+    const id = window.location.hash.replace("#", "") || "starters";
+    showView(id);
+}
+
+/* back/forward support */
+window.addEventListener("hashchange", handleRoute);
+
+/* init */
+window.addEventListener("DOMContentLoaded", () => {
+    handleRoute();
+});

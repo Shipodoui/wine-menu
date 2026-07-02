@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+
+    background: #333;
+
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none; /* Firefox */
+}
+
+nav::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+nav button {
+    flex: 0 0 auto;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+/* MAIN CONTAINER */
+main {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    min-height: 500px;
+}
+
+/* VIEWS (categories + items) */
+.category,
+.itemPage {
+    position: absolute;
+    width: 100%;
+
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* ACTIVE VIEW */
+.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    position: relative;
+}
+
+/* GRID */
+.category {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+/* CARD */
+.menuItem {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.15s ease;
+}
+
+.menuItem:hover {
+    transform: scale(1.03);
+}
+
+/* ITEM PAGE */
+.itemPage img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.itemPage button {
+    margin-bottom: 15px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
