@@ -34,8 +34,8 @@ nav::-webkit-scrollbar {
     display: none; /* Chrome/Safari */
 }
 
-nav > * {
-    flex: 0 0 auto;
+nav.is-overflow {
+    justify-content: flex-start;
 }
 
 nav button {
