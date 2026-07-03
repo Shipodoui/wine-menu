@@ -47,6 +47,12 @@ nav button {
     cursor: pointer;
 }
 
+nav button.active {
+    font-weight: bold;
+    border-bottom: 2px solid green;
+    opacity: 1;
+}
+
 /* MAIN CONTAINER */
 main {
     position: relative;
@@ -157,8 +163,8 @@ main {
     bottom: 0;
     right: 0;
 
-    width: clamp(480px, 35vmax, 100vw);
-	height: clamp(400px, 30vmax, 100vh);
+    width: clamp(480px, 35vmax, 35vmax);
+	height: clamp(400px, 30vmax, 30vmax);
 
     background-image: url("assets/vine_background.png");
     background-repeat: no-repeat;

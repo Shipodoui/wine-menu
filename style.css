@@ -47,6 +47,11 @@ nav button {
     cursor: pointer;
 }
 
+nav button.active {
+    font-weight: bold;
+    border-bottom: 2px solid green;
+}
+
 /* MAIN CONTAINER */
 main {
     position: relative;
