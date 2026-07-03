@@ -132,6 +132,8 @@ main {
 .item-price {
   white-space: nowrap;
   font-weight: bold;
+  margin-block-start: 1em;
+  font-size: 2em;
 }
 
 .active img {
@@ -148,4 +150,33 @@ main {
     background: #333;
     color: white;
     cursor: pointer;
+}
+
+#bottom-background {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+    width: clamp(480px, 35vmax, 100vw);
+	height: clamp(400px, 30vmax, 100vh);
+
+    background-image: url("assets/vine_background.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: cover;
+
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: -1;          /* Put it behind your content */
+	
+	opacity: 0.5;
+}
+
+#test {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100px;
+    background: red;
+    z-index: -1;
 }

@@ -11,6 +11,7 @@
       <h1>My Restaurant</h1>
     </header>
     <nav>
+      <button onclick="navigate('vins')">Vins</button>
       <button onclick="navigate('entrees')">Entrées</button>
       <button onclick="navigate('tapas')">Tapas</button>
       <button onclick="navigate('plats')">Plats</button>
@@ -18,6 +19,20 @@
     </nav>
     <main>
       <!-- CATEGORIES -->
+      <section class="view category" id="vins">
+        <div class="menuItem" onclick="navigate('beaujolais-nouveau')">
+          <h3>Beaujolais Nouveau</h3>
+          <p>10,00 €</p>
+        </div>
+        <div class="menuItem" onclick="navigate('vin-blanc-random')">
+          <h3>Vin blanc random</h3>
+          <p>5,00 €</p>
+        </div>
+        <div class="menuItem" onclick="navigate('rose-random')">
+          <h3>Rosé random</h3>
+          <p>2,00 €</p>
+        </div>
+      </section>
       <section class="view category" id="entrees">
         <div class="menuItem" onclick="navigate('soupe-a-la-tomate')">
           <h3>Soupe à la tomate</h3>
@@ -63,6 +78,99 @@
         </div>
       </section>
       <!-- ITEMS -->
+      <section class="view itemPage" id="beaujolais-nouveau">
+        <button onclick="navigate('vins')">← Retour</button>
+        <div class="item-info">
+          <div class="item-desc">
+            <h2>Beaujolais Nouveau</h2>
+            <p>Vin rouge</p>
+          </div>
+          <div class="item-price">10,00 €</div>
+        </div>
+        <p>
+          <b>Terroir :</b>
+           Beaujolais  
+        </p>
+        <p>
+          <b>Couleur :</b>
+           Rouge  
+          <button style="height: 1.5em;
+                                  width: 1.5em;
+                                  background-color:#7F1734;
+                                  vertical-align: middle;
+                                  display: inline-block;
+                                  padding: 0;
+                                  border: none;
+                                margin-bottom: 0em;"></button>
+        </p>
+        <p>
+          <b>Année :</b>
+           1999  
+        </p>
+        <img src="https://picsum.photos/600/300?10" />
+      </section>
+      <section class="view itemPage" id="vin-blanc-random">
+        <button onclick="navigate('vins')">← Retour</button>
+        <div class="item-info">
+          <div class="item-desc">
+            <h2>Vin blanc random</h2>
+            <p>Vin blanc</p>
+          </div>
+          <div class="item-price">5,00 €</div>
+        </div>
+        <p>
+          <b>Terroir :</b>
+           Champagne  
+        </p>
+        <p>
+          <b>Couleur :</b>
+           Blanc  
+          <button style="height: 1.5em;
+                                  width: 1.5em;
+                                  background-color:#f9e8c0;
+                                  vertical-align: middle;
+                                  display: inline-block;
+                                  padding: 0;
+                                  border: none;
+                                margin-bottom: 0em;"></button>
+        </p>
+        <p>
+          <b>Année :</b>
+           2010  
+        </p>
+        <img src="https://picsum.photos/600/300?10" />
+      </section>
+      <section class="view itemPage" id="rose-random">
+        <button onclick="navigate('vins')">← Retour</button>
+        <div class="item-info">
+          <div class="item-desc">
+            <h2>Rosé random</h2>
+            <p>Vin rosé</p>
+          </div>
+          <div class="item-price">2,00 €</div>
+        </div>
+        <p>
+          <b>Terroir :</b>
+           Roseraie  
+        </p>
+        <p>
+          <b>Couleur :</b>
+           Rosé  
+          <button style="height: 1.5em;
+                                  width: 1.5em;
+                                  background-color:#ee7272;
+                                  vertical-align: middle;
+                                  display: inline-block;
+                                  padding: 0;
+                                  border: none;
+                                margin-bottom: 0em;"></button>
+        </p>
+        <p>
+          <b>Année :</b>
+           1954  
+        </p>
+        <img src="https://picsum.photos/600/300?10" />
+      </section>
       <section class="view itemPage" id="soupe-a-la-tomate">
         <button onclick="navigate('entrees')">← Retour</button>
         <div class="item-info">
@@ -72,8 +180,6 @@
           </div>
           <div class="item-price">6,00 €</div>
         </div>
-		<p ><b>Couleur :</b> Rouge <button style="height: 1em; width: 1em; background-color:#222; vertical-align: middle"></button></p>
-		<p><b>Année :</b> 1999</p>
         <img src="https://picsum.photos/600/300?1" />
       </section>
       <section class="view itemPage" id="salade-cesar">
@@ -166,5 +272,6 @@
       </section>
     </main>
     <script src="script.js"></script>
+	<img id="bottom-background"></div>
   </body>
 </html>
