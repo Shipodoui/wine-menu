@@ -11,18 +11,32 @@
       <h1>My Restaurant</h1>
     </header>
     <nav>
-      <button data_view="vins" onclick="navigate('vins')">Vins</button>
-      <button data_view="entrees" onclick="navigate('entrees')">Entrées</button>
-      <button data_view="tapas" onclick="navigate('tapas')">Tapas</button>
-      <button data_view="plats" onclick="navigate('plats')">Plats</button>
-      <button data_view="desserts" onclick="navigate('desserts')">Desserts</button>
+      <button data-view="vins" onclick="navigate('vins')">Vins</button>
+      <button data-view="entrees" onclick="navigate('entrees')">Entrées</button>
+      <button data-view="tapas" onclick="navigate('tapas')">Tapas</button>
+      <button data-view="plats" onclick="navigate('plats')">Plats</button>
+      <button data-view="desserts" onclick="navigate('desserts')">Desserts</button>
     </nav>
     <main>
       <!-- CATEGORIES -->
       <section class="view category" id="vins">
         <div class="menuItem" onclick="navigate('beaujolais-nouveau')">
-          <h3>Beaujolais Nouveau</h3>
+		<div class="item-info">
+          <div class="item-desc">
+		  <h3>Beaujolais Nouveau</h3>
           <p>10,00 €</p>
+          </div>
+          <div class="item-price"><div style="height: 1.5em;
+                                  width: 1.5em;
+                                  background-color:#7F1734;
+                                  vertical-align: middle;
+                                  display: inline-block;
+                                  padding: 0;
+                                  border: none;
+                                margin-bottom: 0em;"></button></div>
+        </div>
+          
+		  
         </div>
         <div class="menuItem" onclick="navigate('vin-blanc-random')">
           <h3>Vin blanc random</h3>
@@ -107,7 +121,7 @@
           <b>Année :</b>
            1999  
         </p>
-        <img src="https://picsum.photos/600/300?10" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="vin-blanc-random">
         <button onclick="navigate('vins')">← Retour</button>
@@ -138,7 +152,7 @@
           <b>Année :</b>
            2010  
         </p>
-        <img src="https://picsum.photos/600/300?10" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="rose-random">
         <button onclick="navigate('vins')">← Retour</button>
@@ -169,7 +183,7 @@
           <b>Année :</b>
            1954  
         </p>
-        <img src="https://picsum.photos/600/300?10" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="soupe-a-la-tomate">
         <button onclick="navigate('entrees')">← Retour</button>
@@ -180,7 +194,7 @@
           </div>
           <div class="item-price">6,00 €</div>
         </div>
-        <img src="https://picsum.photos/600/300?1" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="salade-cesar">
         <button onclick="navigate('entrees')">← Retour</button>
@@ -191,7 +205,7 @@
           </div>
           <div class="item-price">8,00 €</div>
         </div>
-        <img src="https://picsum.photos/600/300?2" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="sticks-de-mozzarella">
         <button onclick="navigate('tapas')">← Retour</button>
@@ -202,7 +216,7 @@
           </div>
           <div class="item-price">4,00 €</div>
         </div>
-        <img src="https://picsum.photos/600/300?8" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="super-sticks-de-mozzarella">
         <button onclick="navigate('tapas')">← Retour</button>
@@ -213,7 +227,7 @@
           </div>
           <div class="item-price">8,00 €</div>
         </div>
-        <img src="https://picsum.photos/600/300?8" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="burger-classique">
         <button onclick="navigate('plats')">← Retour</button>
@@ -224,7 +238,7 @@
           </div>
           <div class="item-price">15,00 €</div>
         </div>
-        <img src="https://picsum.photos/600/300?3" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="steak">
         <button onclick="navigate('plats')">← Retour</button>
@@ -235,7 +249,7 @@
           </div>
           <div class="item-price">24,00 €</div>
         </div>
-        <img src="https://picsum.photos/600/300?4" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="gateau-au-chocolat">
         <button onclick="navigate('desserts')">← Retour</button>
@@ -246,7 +260,7 @@
           </div>
           <div class="item-price">7,00 €</div>
         </div>
-        <img src="https://picsum.photos/600/300?5" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="tiramisu">
         <button onclick="navigate('desserts')">← Retour</button>
@@ -257,7 +271,7 @@
           </div>
           <div class="item-price">5,00 €</div>
         </div>
-        <img src="https://picsum.photos/600/300?6" />
+        <img src="" />
       </section>
       <section class="view itemPage" id="banane-flambee">
         <button onclick="navigate('desserts')">← Retour</button>
@@ -268,7 +282,7 @@
           </div>
           <div class="item-price">8,00 €</div>
         </div>
-        <img src="https://picsum.photos/600/300?7" />
+        <img src="" />
       </section>
     </main>
     <script src="script.js"></script>
