@@ -11,11 +11,11 @@
       <h1>My Restaurant</h1>
     </header>
     <nav>
-      <button onclick="navigate('vins')">Vins</button>
-      <button onclick="navigate('entrees')">Entrées</button>
-      <button onclick="navigate('tapas')">Tapas</button>
-      <button onclick="navigate('plats')">Plats</button>
-      <button onclick="navigate('desserts')">Desserts</button>
+      <button data_view="vins" onclick="navigate('vins')">Vins</button>
+      <button data_view="entrees" onclick="navigate('entrees')">Entrées</button>
+      <button data_view="tapas" onclick="navigate('tapas')">Tapas</button>
+      <button data_view="plats" onclick="navigate('plats')">Plats</button>
+      <button data_view="desserts" onclick="navigate('desserts')">Desserts</button>
     </nav>
     <main>
       <!-- CATEGORIES -->
@@ -272,6 +272,6 @@
       </section>
     </main>
     <script src="script.js"></script>
-	<img id="bottom-background"></div>
+    <div id="bottom-background"></div>
   </body>
 </html>

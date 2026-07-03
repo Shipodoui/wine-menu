@@ -49,8 +49,7 @@ nav button {
 
 nav button.active {
     font-weight: bold;
-    border-bottom: 2px solid green;
-    opacity: 1;
+    border-bottom: 5px solid green;
 }
 
 /* MAIN CONTAINER */
@@ -75,7 +74,7 @@ main {
 }
 
 /* ACTIVE VIEW */
-.active {
+.view.active {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
