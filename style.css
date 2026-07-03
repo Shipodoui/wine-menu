@@ -162,8 +162,8 @@ main {
     bottom: 0;
     right: 0;
 
-    width: clamp(480px, 35vmax, 35vmax);
-	height: clamp(400px, 30vmax, 30vmax);
+    width: clamp(35vmin, 85vmin, 100vmin);
+	height: clamp(30vmin, 70vmin, 100vmin);
 
     background-image: url("assets/vine_background.png");
     background-repeat: no-repeat;
